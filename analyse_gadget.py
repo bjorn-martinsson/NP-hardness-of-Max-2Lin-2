@@ -22,7 +22,7 @@ def parse_gadget(edge_weights, K):
     return gadget_vars
 
 def print_gadget(gadget_vars, K):
-    from generate_witness.verify_gadget import generate_witness
+    from verification_scripts.verify_gadget import generate_witness
 
     c,s1,s2,_,_ = generate_witness(K, gadget_vars)
     
@@ -91,5 +91,3 @@ def verify_all():
             gadget_vars = parse_gadget(edge_weights, K)
             print_gadget(gadget_vars, K)
             print()
-
-verify_all()
