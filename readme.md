@@ -1,12 +1,16 @@
-This repo contains the (Python3) scripts used to construct and verify the gadgets used in the paper
+This repo contains the (Python3) scripts used to construct and verify the gadgets used in the paper:
 
-On the NP-hardness approximation curve for 2 Max-2Lin(2)
+**On the NP-hardness approximation curve for 2 Max-2Lin(2)**
 
-The list of all gadgets can be found in list_of_gadgets.py.
+### list_of_gadgets.py.
+Contains a list of all gadgets used in the Paper.
 
-The verification script (that computes soundness + completeness) can be found in analyse_gadget.py . For perfomance reasons, it is recommended to use PyPy3 when running this script.
+### analyse_gadget.py 
+The verification script (that computes soundness + completeness). For perfomance reasons, it is recommended to use PyPy3 when running this script.
 
-Generating new gadgets can be done by running generate_new_gadgets.py
-This requires;
-* Gurobipy + qsopt_ex (https://www.math.uwaterloo.ca/~bico/qsopt/ex/)
-* Note: License for Gurobi is not needed for running qsopt_ex
+### generate_new_gadgets.py
+Script for generating a gadget with a fixed completeness using an LP solver, Gurobi (fast and uses floating point numbers) or qsopt_ex (slower is exact).
+Running this script requires installing;
+* Gurobipy
+* (Optionally) qsopt_ex (https://www.math.uwaterloo.ca/~bico/qsopt/ex/)
+* (Optionally) License for Gurobi
